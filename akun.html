@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clothing Store</title>
+        <link rel="stylesheet" href="src/style.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    </head>
+
+    <body>
+        <div class="navbar">
+            <div class="isinav">
+                <div id="linea"></div>
+                <a href="index.html">
+                    <div class="navitem">
+                        <i class="bi bi-house"></i>
+                        <p class="navtxt">Beranda</p>
+                    </div>
+                </a>
+
+                <a href="cart.html">
+                    <div class="cart ">
+                        <div class="navitem">
+                            <i class="bi bi-cart2"></i>
+                            <p class="navtxt">Keranjang</p>
+                        </div>
+                        <div id="cartAmount" class="cartAmount">0</div>
+                    </div>
+                </a>
+                <a href="pesanan.html">
+                    <div class="cart ">
+                        <div class="navitem">
+                            <i class="bi bi-truck"></i>
+                            <p class="navtxt">Pesanan</p>
+                        </div>
+                        <div id="pesananAmount" class="cartAmount">0</div>
+                    </div>
+                </a>
+                <a href="akun.html">
+                    <div class="cart ">
+                        <div class="navitem activenav">
+                            <i class="bi bi-person"></i>
+                            <p class="navtxt">Akun</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="iniakun">
+            <span class="bgfix" id="bgchange" onclick="closeModal()"></span>
+            <!-- <div class="bgchange" id=""> -->
+                <form method="POST" enctype="multipart/form-data "
+                    onsubmit="return check(event)" class="change" id="change">
+                    <h1 style="font-size:1.4rem ;">Ubah Data Pengguna</h1>
+                    <label for="username" class="labellogin">
+                        <h4>Username</h4>
+                        <input class="inputanakun" type="text" id="username"
+                            name="username" placeholder="rianmz" maxlength="14" />
+                    </label>
+                    <label for="noWa" class="labellogin">
+                        <h4>No Whatsapp</h4>
+                        <input class="inputanakun" type="text" id="noWa"
+                            name="noWa" placeholder="085761298714" maxlength="14" />
+                    </label>
+                    <button type="submit" value="Submit">Simpan</button>
+                </form>
+            <!-- </div> -->
+            <div class="akuntop">
+                <p class="pembelit">Akun</p>
+                <i class="bi bi-gear-fill" onclick="openModal()"></i>
+            </div>
+            <div class="akuntengah">
+                <div class="isiakun">
+                    <i class="bi bi-person-circle"></i>
+                    <div class="isiakuntengah">
+                        <h3 id="namanya"></h3>
+                        <p id="wanya"></p>
+                    </div>
+                </div>
+                <img src="images/bgakun.png" />
+            </div>
+            <div class="akunbawah">
+                <div class="isiakunbawah">
+                    <div class="kiriakunbawah"><i class="bi bi-patch-question"></i></div>
+                    <div class="tengahakunbawah">
+                        <h4>QNA</h4>
+                        <p>Pertanyaan yang sering diajukan</p>
+                    </div>
+                    <div class="kananakunbawah"><i class="bi bi-chevron-right"></i></div>
+                </div>
+                <div class="isilogout" onclick="logout()">
+                    <div class="logouttext">
+                        <h4>LOGOUT</h4>
+                    </div>
+                    <div class="logoutlogo"><i class="bi bi-box-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+    <script src="src/Data.js"></script>
+    <script src="src/akun.js"></script>
+
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Store</title>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gluten:wght@300;500&family=Nunito:wght@300;400;700;900&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  </head>
+
+  <body>
+    <div class="wrapper-home">
+      <!-- closedetail -->
+      <span id="bg" onclick="closebtn()"></span>
+      <!-- topsection -->
+      <div class="top">
+        <div class="brand">SoeStyle</div>
+        <div id="pojokkanan" class="pesan">
+
+        </div>
+      </div>
+      <!-- search -->
+      <label id="search" class="topsearch">
+        <i class="bi bi-search"></i>
+        <input type="text" class="search" placeholder="Mau beli apa nih?"/>
+      </label>
+      <!-- slider -->
+      <div class="slide">
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="images/bnr-1.jpg" /></div>
+              <div class="swiper-slide"><img src="images/bnr--2.png" /></div>
+              <div class="swiper-slide"><img src="images/bnr--3.png" /></div>
+              <div class="swiper-slide"><img src="images/bnr--4.png" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- kategori -->
+      <div class="kategori">
+        <div class="linek"></div>
+        <div id="klik" class="isikategori">
+          <div class="bgkategori"><img src="images/kall.png" width="40px" /></div>
+          <div class="txtkategori">Semua Product</div>
+          <div id="active1" class="active"></div>
+        </div>
+        <div id="klik" class="isikategori">
+          <div class="bgkategori"><img src="images/kkaos.png" width="40px" /></div>
+          <div class="txtkategori">Baju</div>
+          <div id="active2"></div>
+        </div>
+        <div id="klik" class="isikategori">
+          <div class="bgkategori"><img src="images/kcelana.png" width="50px" /></div>
+          <div class="txtkategori">Celana</div>
+          <div id="active3" class=""></div>
+        </div>
+        <div id="klik" class="isikategori">
+          <div class="bgkategori"><img src="images/jam.png" width="40px" /></div>
+          <div class="txtkategori">Jam</div>
+          <div id="active4" class=""></div>
+        </div>
+        <div id="klik" class="isikategori">
+          <div class="bgkategori"><img src="images/ktopi.png" width="40px" /></div>
+          <div class="txtkategori">Topi</div>
+          <div id="active5" class=""></div>
+        </div>
+        <div id="klik" class="isikategori">
+          <div class="bgkategori"><img src="images/ksepatu.png" width="40px" /></div>
+          <div class="txtkategori">Sepatu</div>
+          <div id="active6" class=""></div>
+        </div>
+      </div>
+      <!-- nav -->
+      <div class="navbar">
+        <div class="isinav">
+          <div id="line"></div>
+          <a href="index.html">
+            <div class="navitem activenav">
+              <i class="bi bi-house"></i>
+              <p class="navtxt">Beranda</p>
+            </div>
+          </a>
+
+          <a href="cart.html">
+            <div class="cart ">
+              <div class="navitem">
+                <i class="bi bi-cart2"></i>
+                <p class="navtxt">Keranjang</p>
+              </div>
+              <div id="cartAmount" class="cartAmount">0</div>
+            </div>
+          </a>
+          <a href="pesanan.html">
+            <div class="cart ">
+              <div class="navitem">
+                <i class="bi bi-truck"></i>
+                <p class="navtxt">Pesanan</p>
+              </div>
+              <div id="pesananAmount" class="cartAmount">0</div>
+            </div>
+          </a>
+          <a href="akun.html">
+            <div class="cart ">
+              <div class="navitem">
+                <i class="bi bi-person"></i>
+                <p class="navtxt">Akun</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-- detail -->
+      <div id="details"></div>
+      <!-- item list -->
+      <div class="shop" id="shop">
+      </div>
+    </div>
+  </body>
+  <script src="src/Data.js"></script>
+  <script src="src/main.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+  <script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+  
+    var swiper = new Swiper('.swiper-container', {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  centeredSlides: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+  </script>
+</html>
